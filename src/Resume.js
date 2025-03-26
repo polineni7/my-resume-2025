@@ -160,16 +160,16 @@ const sections = {
       <p className="text-base">Marital Status: Unmarried</p>
       <p className="text-base">Location: Hyderabad, TS, India</p>
     </Card>
-  ),
-  declaration: (
-    <Card title="Declaration">
-      <p className="text-base">
-        I hereby confirm that the information provided above is true to the best of my knowledge and belief.
-      </p>
-      <p className="text-base mt-2">(Polineni Ramakrishna)</p>
-      <p className="text-base">Hyderabad</p>
-    </Card>
-  ),
+  )//,
+  // declaration: (
+  //   <Card title="Declaration">
+  //     <p className="text-base">
+  //       I hereby confirm that the information provided above is true to the best of my knowledge and belief.
+  //     </p>
+  //     <p className="text-base mt-2">(Polineni Ramakrishna)</p>
+  //     <p className="text-base">Hyderabad</p>
+  //   </Card>
+  // ),
 };
 
 const Resume = () => {
