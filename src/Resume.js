@@ -1,33 +1,26 @@
 import React, { useState } from "react";
 import profileImage from "./assets/profile.jpg";
 
-// Reusable Card component with subtle hover transitions.
-const Card = ({ title, children }) => {
-  return (
-    <div className="bg-white rounded-lg shadow-md p-6 mt-6 border-t-4 border-blue-500 transform transition-transform duration-300 hover:scale-105">
-      {title && (
-        <h2 className="text-2xl font-bold text-gray-800 tracking-wide">
-          {title}
-        </h2>
-      )}
-      <div className="mt-4 text-gray-700 text-base leading-relaxed">
-        {children}
-      </div>
+const Card = ({ title, children }) => (
+  <div className="bg-white rounded-lg shadow-md p-6 mt-6 border-t-4 border-blue-500 transform transition-transform duration-300 hover:scale-105">
+    {title && (
+      <h2 className="text-2xl font-bold text-gray-800">{title}</h2>
+    )}
+    <div className="mt-4 text-gray-700 text-base leading-relaxed">
+      {children}
     </div>
-  );
-};
+  </div>
+);
 
 const sections = {
   summary: (
     <Card title="Professional Summary">
       <p>
-        Accomplished Software Engineer with 4+ years of experience in designing and
-        implementing high-performance, scalable software solutions. Expertise in .NET Core,
-        ASP.NET Core Web API, Angular, and Azure SQL. Proven track record of optimizing system
-        performance, reducing operational costs, and enhancing user experience. Adept at driving
-        projects from concept to completion, collaborating in Agile teams, and delivering robust
-        solutions tailored to client needs. Passionate about continuous learning and contributing
-        to technological innovation in fast-paced environments.
+        Accomplished Software Engineer with 4+ years of experience designing and delivering scalable,
+        high-performance software solutions. Specialized in .NET Core, ASP.NET Core Web API, Angular 19,
+        Azure SQL, and PostgreSQL. Skilled in optimizing systems, building modular architectures, and
+        collaborating within Agile environments. Passionate about innovation, continuous learning, and
+        driving customer success.
       </p>
     </Card>
   ),
@@ -35,141 +28,77 @@ const sections = {
     <Card title="Professional Experience">
       {/* GitaIT Experience */}
       <div className="mt-4">
-        <h3 className="text-xl font-bold text-gray-800">Software Engineer</h3>
-        <p className="text-base text-gray-600">GitaIT Pvt. Ltd., KPHB 5th Phase, Hyderabad, TS</p>
-        <p className="text-base text-gray-600">May 2024 – Present</p>
-        <ul className="list-disc list-inside mt-2 space-y-1 text-base text-gray-700">
-          <li>
-            Developed critical features for a Wealth Management Platform including task management, file storage, and client-centric modules.
-          </li>
-          <li>
-            Implemented a task management module, increasing team productivity by 30% through enhanced collaboration.
-          </li>
-          <li>
-            Built a cloud-based file storage solution using Azure, ensuring secure document management.
-          </li>
-          <li>
-            Designed dynamic search and filtering features, enabling quick data access and improved client satisfaction.
-          </li>
-          <li>
-            Collaborated in an Agile environment to consistently meet sprint deadlines and deliver high-quality software.
-          </li>
+        <h3 className="text-xl font-bold">Software Engineer</h3>
+        <p className="text-gray-600">GitaIT Pvt. Ltd., Hyderabad | May 2025 – Present</p>
+        <strong className="block mt-2 text-gray-700">Project: Campaign Connect</strong>
+        <ul className="list-disc list-inside mt-1">
+          <li>Developed full-stack backend architecture and database design from scratch.</li>
+          <li>Implemented scalable module designs, collaborated in Agile sprints, development deployments.</li>
         </ul>
-        <p className="mt-2 font-semibold text-gray-800">Technologies:</p>
-        <ul className="list-disc list-inside mt-1 space-y-1 text-base text-gray-700">
-          <li>C#</li>
-          <li>ASP.NET Core Web API</li>
-          <li>Azure SQL Server</li>
-          <li>Agile Methodologies</li>
-          <li>LINQ</li>
-          <li>Entity Framework Core</li>
-          <li>Bitbucket</li>
-          <li>REST API</li>
+        <strong className="block mt-2 text-gray-700">Project: Amplify (Wealth Management)</strong>
+        <ul className="list-disc list-inside mt-1">
+          <li>Developed task management, client onboarding, cloud file storage modules.</li>
+          <li>Increased productivity by 30% with real-time search and filter optimizations.</li>
+          <li>Integrated Azure Blob Storage for secure document management.</li>
         </ul>
+        <p className="mt-2 font-semibold">Technologies:</p>
+        <p>.NET Core, C#, Angular 19, Azure SQL, REST API, Git, Bitbucket, Agile</p>
       </div>
+
       {/* BitApps Experience */}
       <div className="mt-8">
-        <h3 className="text-xl font-bold text-gray-800">Software Engineer</h3>
-        <p className="text-base text-gray-600">BitApps India Pvt. Ltd., Madhapur, Hyderabad, TS</p>
-        <p className="text-base text-gray-600">June 2021 – May 2024</p>
-        <ul className="list-disc list-inside mt-2 space-y-1 text-base text-gray-700">
-          <li>
-            Developed multiple modules for the Hospital Management System (HMS), enhancing patient data, billing, and pharmacy operations.
-          </li>
-          <li>
-            Created interactive, user-friendly Angular 12 interfaces to streamline hospital management.
-          </li>
-          <li>
-            Optimized SQL queries to boost database performance, reducing execution time by up to 20%.
-          </li>
-          <li>
-            Delivered client-driven updates and improvements, achieving a 95% client satisfaction rate.
-          </li>
-          <li>
-            Spearheaded Dental and Stores Modules, reducing manual errors by 15%.
-          </li>
+        <h3 className="text-xl font-bold">Software Engineer</h3>
+        <p className="text-gray-600">BitApps India Pvt. Ltd., Hyderabad | June 2021 – May 2024</p>
+        <strong className="block mt-2 text-gray-700">Project: Supply Chain Management System</strong>
+        <ul className="list-disc list-inside mt-1">
+          <li>Designed modules for procurement, vendor management, and logistics automation.</li>
+          <li>Upgraded project from AngularJS to Angular 12, ASP.NET to Core version.</li>
+          <li>Implemented KPI dashboards, inventory control systems reducing shortages.</li>
         </ul>
-        <p className="mt-2 font-semibold text-gray-800">Technologies:</p>
-        <ul className="list-disc list-inside mt-1 space-y-1 text-base text-gray-700">
-          <li>C#</li>
-          <li>LINQ</li>
-          <li>SQL Server</li>
-          <li>JavaScript</li>
-          <li>Entity Framework</li>
-          <li>ADO.Net</li>
-          <li>AngularJS</li>
-          <li>Postman</li>
-          <li>ASP.NET Core Web API</li>
-          <li>PostgreSQL</li>
-          <li>Angular 12</li>
-          <li>GitHub</li>
+        <strong className="block mt-2 text-gray-700">Project: Hospital Management System (HMS)</strong>
+        <ul className="list-disc list-inside mt-1">
+          <li>Built patient, billing, dental, and pharmacy modules on Angular 12 and .NET Core.</li>
+          <li>Optimized SQL performance, reducing query execution time by 20%.</li>
+          <li>Reduced manual data entry errors by 15% through smart validations.</li>
         </ul>
+        <p className="mt-2 font-semibold">Technologies:</p>
+        <p>C#, LINQ, SQL Server, PostgreSQL, Angular 12, REST API, Entity Framework Core, ADO.NET</p>
       </div>
-      {/* Internship Experience */}
+
+      {/* Internship */}
       <div className="mt-8">
-        <h3 className="text-xl font-bold text-gray-800">Internship</h3>
-        <p className="text-base text-gray-600">BitApps India Pvt. Ltd., Madhapur, Hyderabad, TS</p>
-        <p className="text-base text-gray-600">March 2021 – June 2021</p>
-        <ul className="list-disc list-inside mt-2 space-y-1 text-base text-gray-700">
-          <li>
-            Contributed to development tasks across the ASP.NET Core Web API stack, gaining hands-on experience in C#, SQL, and Angular.
-          </li>
-          <li>
-            Assisted in building backend logic and optimizing database queries for improved system performance.
-          </li>
-          <li>
-            Participated in unit testing and debugging, enhancing deliverable quality and system stability.
-          </li>
+        <h3 className="text-xl font-bold">Intern Developer</h3>
+        <p className="text-gray-600">BitApps India Pvt. Ltd., Hyderabad | Mar 2021 – Jun 2021</p>
+        <ul className="list-disc list-inside mt-1">
+          <li>Worked on ASP.NET Core Web APIs, database optimizations, and backend logic development.</li>
+          <li>Performed debugging, unit testing and API enhancements for better stability.</li>
         </ul>
-        <p className="mt-2 font-semibold text-gray-800">Technologies:</p>
-        <ul className="list-disc list-inside mt-1 space-y-1 text-base text-gray-700">
-          <li>C#</li>
-          <li>LINQ</li>
-          <li>JavaScript</li>
-          <li>Entity Framework</li>
-          <li>SQL Server</li>
-          <li>Postman</li>
-          <li>ASP.NET Core Web API</li>
-          <li>Angular 12</li>
-          <li>GitHub</li>
-        </ul>
+        <p className="mt-2 font-semibold">Technologies:</p>
+        <p>ASP.NET Core, Angular 12, SQL Server, Postman, GitHub</p>
       </div>
     </Card>
   ),
   education: (
     <Card title="Education">
       <div className="mt-4">
-        <h3 className="text-xl font-bold text-gray-800">Master of Computer Applications (MCA)</h3>
-        <p className="text-base text-gray-700">
-          Vignan's Foundation for Science, Technology & Research, Guntur, AP, 2021 | 83%
-        </p>
+        <h3 className="font-bold">Master of Computer Applications (MCA)</h3>
+        <p>Vignan's Foundation for Science, Technology & Research, Guntur | 2021 | 83%</p>
       </div>
       <div className="mt-4">
-        <h3 className="text-xl font-bold text-gray-800">Bachelor of Computer Applications (BCA)</h3>
-        <p className="text-base text-gray-700">
-          PNC & KR Degree College, Narasaraopet | Acharya Nagarjuna University, Guntur, AP, 2019 | 70%
-        </p>
+        <h3 className="font-bold">Bachelor of Computer Applications (BCA)</h3>
+        <p>PNC & KR Degree College, Narasaraopet (Acharya Nagarjuna University) | 2019 | 70%</p>
       </div>
     </Card>
   ),
   personal: (
     <Card title="Personal Information">
-      <p className="text-base">Full Name: Polineni Ramakrishna</p>
-      <p className="text-base">Date of Birth: 16-May-1996</p>
-      <p className="text-base">Gender: Male</p>
-      <p className="text-base">Marital Status: Unmarried</p>
-      <p className="text-base">Location: Hyderabad, TS, India</p>
+      <p>Full Name: Polineni Ramakrishna</p>
+      <p>Date of Birth: 16-May-1996</p>
+      <p>Gender: Male</p>
+      <p>Marital Status: Unmarried</p>
+      <p>Location: Hyderabad, TS, India</p>
     </Card>
-  )//,
-  // declaration: (
-  //   <Card title="Declaration">
-  //     <p className="text-base">
-  //       I hereby confirm that the information provided above is true to the best of my knowledge and belief.
-  //     </p>
-  //     <p className="text-base mt-2">(Polineni Ramakrishna)</p>
-  //     <p className="text-base">Hyderabad</p>
-  //   </Card>
-  // ),
+  )
 };
 
 const Resume = () => {
@@ -177,7 +106,6 @@ const Resume = () => {
 
   return (
     <div className="max-w-screen-xl mx-auto p-6 font-sans">
-      {/* Header Section */}
       <header className="flex justify-between items-center py-6 border-b">
         <div>
           <h1 className="text-3xl font-bold text-gray-800">Polineni Ramakrishna</h1>
@@ -185,37 +113,29 @@ const Resume = () => {
           <p className="text-gray-600">+91 9494926274</p>
           <p className="text-gray-600">rampolineni@outlook.com</p>
         </div>
-        <div className="w-32 h-32 rounded-full overflow-hidden shadow-md">
-          <img
-            alt="Profile"
-            className="w-full h-full object-cover"
-            src={profileImage}
-          />
+        <div className="w-28 h-28 rounded-full overflow-hidden shadow-md">
+          <img src={profileImage} alt="Profile" className="object-cover w-full h-full" />
         </div>
       </header>
 
-      {/* Navigation Tabs */}
       <nav className="mt-6 flex justify-center space-x-4 border-b pb-3">
         {Object.keys(sections).map((key) => (
           <button
             key={key}
-            className={`px-4 py-2 rounded transition-colors duration-300 ${
+            onClick={() => setActiveSection(key)}
+            className={`px-4 py-2 rounded ${
               activeSection === key ? "bg-blue-500 text-white" : "bg-gray-200 text-gray-700"
             }`}
-            onClick={() => setActiveSection(key)}
           >
             {key.charAt(0).toUpperCase() + key.slice(1)}
           </button>
         ))}
       </nav>
 
-      {/* Content Section */}
       <main className="mt-8">{sections[activeSection]}</main>
 
-      {/* Footer */}
-      <footer className="mt-12 text-gray-500 text-center">
-        <p>Let's connect</p>
-        <p>All rights reserved Polineni Ramakrishna 2025</p>
+      <footer className="mt-12 text-center text-gray-500">
+        <p>All rights reserved © Polineni Ramakrishna 2025</p>
       </footer>
     </div>
   );
