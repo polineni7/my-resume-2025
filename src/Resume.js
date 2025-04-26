@@ -21,7 +21,7 @@ const sections = {
   summary: (
     <Card title="Professional Summary">
       <p>
-        Accomplished Software Engineer with 3.8+ years of experience in designing and
+        Accomplished Software Engineer with 4+ years of experience in designing and
         implementing high-performance, scalable software solutions. Expertise in .NET Core,
         ASP.NET Core Web API, Angular, and Azure SQL. Proven track record of optimizing system
         performance, reducing operational costs, and enhancing user experience. Adept at driving
